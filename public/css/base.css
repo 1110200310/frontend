@@ -1,0 +1,55 @@
+:root {
+    --white-color: #ddcece;
+    --black-color: #000;
+    --text-color: #333;
+
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto',sans-serif;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-with {
+    width: 100%;
+    flex-wrap: wrap;
+}
+/* Modal */
+.modal {
+    z-index: 1000; /* Đặt giá trị cao để bao phủ toàn bộ màn hình */
+    display: flex;
+    position: fixed; /* Đảm bảo .login bao phủ toàn màn hình */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__overlay {
+    position:static;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+  
+}
+
+.modal__body {
+    width: 400px;
+    height: 400px;
+    background-color: var(--white-color);
+    margin: auto; /* Không cần thiết khi dùng flexbox */
+    position: relative; /* Để đảm bảo z-index hoạt động đúng */
+    z-index: 1; /* Nằm trên modal__overlay */
+    border-radius: 5px;
+}
+
+
+    

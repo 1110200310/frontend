@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/fonts/fontawesome-free-6.7.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>web mỹ phẩm</title>
+</head>
+<body>
+    <!-- Bìa trên -->
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate">
+                            <!-- <img src="public/img/logo.png" alt="Logo" class="header__logo"> -->
+                        </li>  
+                        <li class="header__navbar-item">
+                            <form action="#" class="header__search-form">
+                                <input type="text" class="header__search-input" placeholder="Tìm kiếm...">
+                                <button type="submit" class="header__search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </li>                      
+                    </ul>
+                    
+                    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="index.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-home"></i> Trang chủ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="gioithieu.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-info-circle"></i> Giới thiệu</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="sanpham.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fas fa-gift"></i> Sản phẩm dịch vụ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="tintuc.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-newspaper"></i> Tin tức</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="lienhe.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-address-book"></i> Liên hệ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="dangky.html" class="header__navbar-item-link button">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="dangnhap.html" class="header__navbar-item-link button">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Slide Show -->
+    <div class="slide-show">
+        <div class="list-images">
+            <img src="../public/img/slide-show1.jpg" alt="Slide 1">
+            <img src="../public/img/slide-show2.jpg" alt="Slide 2">
+            <img src="../public/img/slide-show3.jpg" alt="Slide 3">
+        </div>
+        <div class="btns">
+            <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right btn"><i class='bx bx-chevron-right'></i></div>
+        </div>
+        <div class="index-images">
+            <div class="index-item index-item-0 active"></div>
+            <div class="index-item index-item-1"></div>
+            <div class="index-item index-item-2"></div>
+        </div>        
+    </div>
+    
+    <script src="../public/js/index.js"></script>
+        <div class="container">
+            <section class="product-section">
+                <h2 class="product-section__title">Sản phẩm nổi bật</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="../public/img/sanpham1.png" alt="Sản phẩm 1">
+                        <h3 class="product-name">Kem dưỡng da</h3>
+                        <p class="product-price">250.000 VNĐ</p>
+                        <a href="chitietsanpham.html" class="btnn btn--primary">Xem thêm</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="../public/img/sanpham2.png" alt="Sản phẩm 2">
+                        <h3 class="product-name">Son môi cao cấp</h3>
+                        <p class="product-price">180.000 VNĐ</p>
+                        <a href="chitietsanpham.html" class="btnn btn--primary">Xem thêm</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="../public/img/sanpham3.png" alt="Sản phẩm 3">
+                        <h3 class="product-name">Nước hoa hồng</h3>
+                        <p class="product-price">300.000 VNĐ</p>
+                        <a href="chitietsanpham.html" class="btnn btn--primary">Xem thêm</a>
+                    </div>
+                    <div class="product-item">
+                        <img src="../public/img/sanpham4.png" alt="Sản phẩm 3">
+                        <h3 class="product-name">Nước hoa hồng</h3>
+                        <p class="product-price">300.000 VNĐ</p>
+                        <a href="chitietsanpham.html" class="btnn btn--primary">Xem thêm</a>
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+        <!-- DỊCH VỤ SECTION -->
+<section class="service-section">
+    <h2 class="service-section__title">Dịch Vụ Nổi Bật</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <img src="../public/img/dịchvu1.jpg" alt="Dịch vụ 1">
+            <h3 class="service-title">Chăm sóc da chuyên sâu</h3>
+            <p class="service-desc">Liệu trình giúp da căng bóng, khỏe mạnh từ sâu bên trong.</p>
+            <button class="service-btn">Tìm hiểu thêm</button>
+        </div>
+        <div class="service-item">
+            <img src="../public/img/dichvu2.png" alt="Dịch vụ 2">
+            <h3 class="service-title">Triệt lông vĩnh viễn</h3>
+            <p class="service-desc">Công nghệ laser hiện đại, an toàn, không đau rát.</p>
+            <button class="service-btn">Tìm hiểu thêm</button>
+        </div>
+        <div class="service-item">
+            <img src="../public/img/dichvu3.jpg" alt="Dịch vụ 3">
+            <h3 class="service-title">Giảm béo công nghệ cao</h3>
+            <p class="service-desc">Loại bỏ mỡ thừa hiệu quả, không cần phẫu thuật.</p>
+            <button class="service-btn">Tìm hiểu thêm</button>
+        </div>
+        <div class="service-item">
+            <img src="../public/img/dichvu4.jpg" alt="Dịch vụ 4">
+            <h3 class="service-title">Giảm lão hoá ra</h3>
+            <p class="service-desc">Loại lão hoá hiệu quả, không cần phẫu thuật.</p>
+            <button class="service-btn">Tìm hiểu thêm</button>
+        </div>
+    </div>
+</section>
+
+
+        <footer class="footer"></footer>
+    </div>
+
+
+   <!-- modal layout -->
+<div class="modal">
+    <div class="modal__overlay">
+        <div class="modal__body">
+            <div class="modal_inner">
+
+                
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập email"> 
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu"> 
+                            </div>
+                            <!-- <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu"> 
+                            </div> -->
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng viện đăng kí, bạn đã đồng ý với leskin về 
+                                <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+
+                        <div class="auth-form__controls">
+                            <button class="bttn" onclick="window.location.href='index.html'">Trở lại</button>
+                            <button class="bttn btn--primary">Đăng nhập</button>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Khung nhập thông tin -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <!-- Cột 1: Thông tin liên hệ -->
+            <div class="footer__column">
+                <h5>LIÊN HỆ</h5>
+                <p><i class="fa-solid fa-envelope"></i> thammyvien@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:0123456789" class="phone-link">0376534732</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> 25 Vũ Ngọc Phan, Láng Hạ, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-globe"></i> thammyvien.com.vn</p>
+            </div>
+
+            <!-- Cột 2: Về công ty -->
+            <div class="footer__column">
+                <h5>VỀ THẨM MỸ VIỆN</h5>
+                <ul class="footer__list">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Sứ mệnh</a></li>
+                    <li><a href="#">Tăng trưởng</a></li>
+                    <li><a href="#">Quan hệ cổ đông</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Tải App -->
+            <div class="footer__column">
+                <h5>TẢI APP NGAY</h5>
+                <div class="footer__apps">
+                    <img src="../public/img/goodle_play.jpg" alt="Android App"><br>
+                    <img src="../public/img/app_store.jpg" alt="iOS App">
+                </div>
+            </div>
+
+            <!-- Cột 4: Đăng ký nhận tin -->
+            <div class="footer__column">
+                <h5>Gmail</h5>
+                <p>Đăng ký để nhận ưu đãi hàng tháng:</p>
+                <form class="footer__form">
+                    <input type="email" placeholder="Nhập email">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <div class="footer__socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+</body>
+</html>
