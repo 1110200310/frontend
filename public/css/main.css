@@ -152,6 +152,7 @@
 .container {
     flex: 1; /* Đảm bảo phần nội dung mở rộng */
     padding-bottom: 50px; /* Tránh footer che nội dung */
+    
 }
 
 .product-list {
@@ -457,11 +458,15 @@
 
 .news-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 cột mỗi hàng */
     gap: 20px;
 }
 
 .news-item {
+    display: flex;
+    flex-direction: row; /* Ảnh bên trái, nội dung bên phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa ảnh và nội dung */
     background: #fff;
     padding: 15px;
     border-radius: 8px;
@@ -474,31 +479,41 @@
 }
 
 .news-item img {
-    width: 100%;
-    height: auto;
+    width: 246px; /* Giữ nguyên kích thước ảnh */
+    height: 248px;
+    object-fit: cover;
     border-radius: 5px;
+    flex-shrink: 0; /* Đảm bảo ảnh không bị thu nhỏ */
 }
 
+.news-content {
+    flex: 1; /* Nội dung chiếm phần còn lại */
+    text-align: left; /* Căn lề trái cho nội dung */
+}
+
+
+
 .news-heading {
-    font-size: 20px;
+    font-size: 13px;
     margin: 10px 0;
-    color: #ff6699;
+    color: #020202;
 }
 
 .news-description {
-    font-size: 16px;
+    font-size: 13px;
     color: #666;
     margin-bottom: 10px;
 }
 
 .news-read-more {
-    display: inline-block;
-    padding: 8px 15px;
-    background: #ff6699;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+        border: 2px solid rgb(210, 128, 128); /* Viền màu đen */
+        background-color: white; /* Màu nền trắng */
+        color: orange;
+        padding: 8px 16px; /* Tạo khoảng cách bên trong */
+        text-decoration: none; /* Bỏ gạch chân */
+        display: inline-block; /* Giúp hiển thị đẹp */
+        border-radius: 5px; /* Bo tròn nhẹ */
+        transition: all 0.3s ease-in-out; /* Hiệu ứng mượt khi hover */
 }
 
 .news-read-more:hover {
@@ -637,10 +652,11 @@
 }
 
 .brand-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 5px !important;
 }
+
 
 .brand-btn {
     border: 2px solid rgb(210, 128, 128); /* Viền màu đen */

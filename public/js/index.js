@@ -127,76 +127,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // phân trang tin tức
-document.addEventListener("DOMContentLoaded", function() {
-    const itemsPerPage = 6; // Số lượng tin tức trên mỗi trang
-    let currentPage = 1;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const itemsPerPage = 6; 
+//     let currentPage = 1;
 
-    const newsItems = document.querySelectorAll(".news-item"); // Lấy danh sách tin tức
-    const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+//     const newsItems = document.querySelectorAll(".news-item"); 
+//     const totalPages = Math.ceil(newsItems.length / itemsPerPage);
 
-    function showPage(page) {
-        let start = (page - 1) * itemsPerPage;
-        let end = start + itemsPerPage;
+//     function showPage(page) {
+//         let start = (page - 1) * itemsPerPage;
+//         let end = start + itemsPerPage;
 
-        newsItems.forEach((item, index) => {
-            if (index >= start && index < end) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
-        });
+//         newsItems.forEach((item, index) => {
+//             if (index >= start && index < end) {
+//                 item.style.display = "block";
+//             } else {
+//                 item.style.display = "none";
+//             }
+//         });
 
-        document.getElementById("pageNumber").textContent = page;
-    }
+//         document.getElementById("pageNumber").textContent = page;
+//     }
 
-    document.getElementById("prevPage").addEventListener("click", function() {
-        if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage);
-        }
-    });
+//     document.getElementById("prevPage").addEventListener("click", function() {
+//         if (currentPage > 1) {
+//             currentPage--;
+//             showPage(currentPage);
+//         }
+//     });
 
-    document.getElementById("nextPage").addEventListener("click", function() {
-        if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage);
-        }
-    });
+//     document.getElementById("nextPage").addEventListener("click", function() {
+//         if (currentPage < totalPages) {
+//             currentPage++;
+//             showPage(currentPage);
+//         }
+//     });
 
-    showPage(currentPage);
-});
-// Danh sách chi tiết khi nhấn vào xem thêm ở tin tức
-document.addEventListener("DOMContentLoaded", function () {
-    // Kiểm tra xem đang ở trang chi tiết hay không
-    if (document.getElementById("news-detail")) {
-        // Lấy tham số 'id' từ URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const newsId = urlParams.get("id");
+//     showPage(currentPage);
+// });
 
-        if (!newsId) {
-            document.getElementById("news-detail").innerHTML = "<p>Không tìm thấy bài viết.</p>";
-            return;
-        }
+// document.addEventListener("DOMContentLoaded", function () {
+   
+//     if (document.getElementById("news-detail")) {
+        
+//         const urlParams = new URLSearchParams(window.location.search);
+//         const newsId = urlParams.get("id");
 
-        // Danh sách bài viết mẫu (có thể thay bằng API hoặc JSON)
-        const newsData = [
-            { id: "1", title: "Bí quyết dưỡng da", image: "../public/img/tintuc1.png", content: "Nội dung chi tiết bài viết 1..." },
-            { id: "2", title: "Xu hướng mỹ phẩm", image: "../public/img/tintuc2.png", content: "Nội dung chi tiết bài viết 2..." },
-            { id: "3", title: "Cách trang điểm tự nhiên", image: "../public/img/tintuc3.png", content: "Nội dung chi tiết bài viết 3..." }
-        ];
+//         if (!newsId) {
+//             document.getElementById("news-detail").innerHTML = "<p>Không tìm thấy bài viết.</p>";
+//             return;
+//         }
 
-        // Tìm bài viết theo id
-        const article = newsData.find(item => item.id === newsId);
+        
+//         const newsData = [
+//             { id: "1", title: "Bí quyết dưỡng da", image: "../public/img/tintuc1.png", content: "Nội dung chi tiết bài viết 1..." },
+//             { id: "2", title: "Xu hướng mỹ phẩm", image: "../public/img/tintuc2.png", content: "Nội dung chi tiết bài viết 2..." },
+//             { id: "3", title: "Cách trang điểm tự nhiên", image: "../public/img/tintuc3.png", content: "Nội dung chi tiết bài viết 3..." }
+//         ];
 
-        if (article) {
-            document.getElementById("news-title").textContent = article.title;
-            document.getElementById("news-image").src = article.image;
-            document.getElementById("news-content").textContent = article.content;
-        } else {
-            document.getElementById("news-detail").innerHTML = "<p>Bài viết không tồn tại.</p>";
-        }
-    }
-});
+        
+//         const article = newsData.find(item => item.id === newsId);
+
+//         if (article) {
+//             document.getElementById("news-title").textContent = article.title;
+//             document.getElementById("news-image").src = article.image;
+//             document.getElementById("news-content").textContent = article.content;
+//         } else {
+//             document.getElementById("news-detail").innerHTML = "<p>Bài viết không tồn tại.</p>";
+//         }
+//     }
+// }); tin tức<
 // danh sách khi nhấn xem thêm ở sản phẩm 
 document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra xem có phần hiển thị chi tiết sản phẩm không
