@@ -13,176 +13,132 @@
 </head>
 <body>
     <div class="app">
-        <!-- Header -->
         <header class="header">
             <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--separate">
-                            <img src="../public/img/logo.png" alt="Logo" class="header__logo">
+                            <!-- <img src="../public/img/logo1.png" alt="Logo" class="header__logo"> -->
                         </li>                        
                         <li class="header__navbar-item">
                             <form action="#" class="header__search-form">
-                                <input type="text" class="header__search-input" placeholder="Tin tức mới">
+                                <input type="text" class="header__search-input" placeholder="Tìm kiếm...">
                                 <button type="submit" class="header__search-btn">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </form>
                         </li>                      
                     </ul>
+                    
+                    
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item"><a href="index.html" class="header__navbar-item-link"><i class="fas fa-home"></i> Trang chủ</a></li>
-                        <li class="header__navbar-item"><a href="gioithieu.html" class="header__navbar-item-link"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
-                        <li class="header__navbar-item"><a href="sanpham.html" class="header__navbar-item-link"><i class="fas fa-gift"></i> Sản phẩm dịch vụ</a></li>
-                        <li class="header__navbar-item"><a href="tintuc.html" class="header__navbar-item-link"><i class="fas fa-newspaper"></i> Tin tức</a></li>
-                        <li class="header__navbar-item"><a href="lienhe.html" class="header__navbar-item-link"><i class="fas fa-address-book"></i> Liên hệ</a></li>
-                        <li class="header__navbar-item"><a href="auth-form.html" class="header__navbar-item-link button">Đăng ký</a></li>
-                        <li class="header__navbar-item"><a href="auth-form.html" class="header__navbar-item-link button">Đăng nhập</a></li>
+                        <li class="header__navbar-item">
+                            <a href="index.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-home"></i> Trang chủ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="gioithieu.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-info-circle"></i> Giới thiệu</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="sanpham.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fas fa-gift"></i> Sản phẩm dịch vụ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="tintuc.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-newspaper"></i> Tin tức</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="lienhe.html" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-address-book"></i> Liên hệ</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="dangky.html" class="header__navbar-item-link button">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="dangnhap.html" class="header__navbar-item-link button">Đăng nhập</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
         
-
-        <!-- Chi tiết bài viết -->
-        <header>
-            <h1>Chi tiết bài viết</h1>
-        </header>
+        
+        <div class="product-detail">
+            <li class="header__navbar-item breadcrumb">
+            <a href="index.html" class="header__navbar-item-link">
+                <i class=""></i> Trang chủ
+            </a>
+            <span> > Chi tiết san phẩm</span>
+        </li>
+            <h1 id="product-name"></h1>
+            <img id="product-image" src="" alt="Sản phẩm">
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+        </div>
     
-        <main>
-            <div id="news-detail">
-                <h2 id="product-title"></h2>
-                <img id="news-image" src="" alt="Ảnh bài viết">
-                <p id="news-content"></p>
+        <script>
+            // Danh sách sản phẩm giả lập
+            const products = [
+                { id: 1, name: "Kem dưỡng da", price: "250.000 VNĐ", image: "../public/img/sanpham1.jpg", description: "Dưỡng da mềm mịn suốt 24h." },
+                { id: 2, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/sanpham2.jpg", description: "Làm sáng da, mờ thâm hiệu quả." },
+                { id: 3, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/sanpham3.jpg", description: "Làm sáng da, mờ thâm hiệu quả." },
+                { id: 4, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/chitiet1.jpg", description: "Làm sáng da, mờ thâm hiệu quả." },
+                { id: 5, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/sanpham2.jpg", description: "Làm sáng da, mờ thâm hiệu quả." },
+                { id: 6, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/chitiet1.jpg", description: "Làm sáng da, mờ thâm hiệu quả." },
+                { id: 7, name: "Serum Vitamin C", price: "320.000 VNĐ", image: "../public/img/chitiet1.jpg", description: "Làm sáng da, mờ thâm hiệu quả." }
+
+            ];
+    
+            // Lấy ID sản phẩm từ URL
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get("id");
+    
+            // Tìm sản phẩm theo ID
+            const product = products.find(p => p.id == productId);
+    
+            // Hiển thị thông tin sản phẩm
+            if (product) {
+                document.getElementById("product-name").innerText = product.name;
+                document.getElementById("product-image").src = product.image;
+                document.getElementById("product-price").innerText = "Giá: " + product.price;
+                document.getElementById("product-description").innerText = product.description;
+            } else {
+                document.body.innerHTML = "<h2>Sản phẩm không tồn tại!</h2>";
+            }
+        </script>
+    
+    <!-- Footer -->
+    <div class="brand-highlight">
+        <div class="call-button">
+            <a href="tel:0376534732">
+                <i class="fas fa-phone"></i> Gọi ngay
+            </a>
+        </div>
+        <div class="brand-row">
+            <div class="brand-box">
+                <img src="../public/img/partner-1.png" alt="">
             </div>
-            <a href="sanpham.html">Quay lại trang sản phẩm</a>
-        </main>
-        
-    </div>
-    <div class="container">
-        <div class="products">
-            <h2 class="products__title">Sản phẩm nổi bật</h2>
-            <div class="products__list">
-                <div class="product">
-                    <img src="../public/img/sanpham1.png" alt="Sản phẩm 1">
-                    <h3 class="product__name">Kem dưỡng da</h3>
-                    <p class="product__price">250.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=1" class="news-read-more">Xem thêm</a>
-                </div>
-        
-                <div class="product">
-                    <img src="../public/img/sanpham2.png" alt="Sản phẩm 2">
-                    <h3 class="product__name">kem dưỡng ẩm</h3>
-                    <p class="product__price">320.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=2" class="news-read-more">Xem thêm</a>
-                </div>
-        
-                <div class="product">
-                    <img src="../public/img/sanpham3.png" alt="Sản phẩm 3">
-                    <h3 class="product__name">Serum dưỡng ẩm</h3>
-                    <p class="product__price">450.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=3" class="news-read-more">Xem thêm</a>
-                </div>
-        
-                <div class="product">
-                    <img src="../public/img/sanpham4.png" alt="Sản phẩm 4">
-                    <h3 class="product__name">kem trắng ra</h3>
-                    <p class="product__price">280.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=4" class="news-read-more">Xem thêm</a>
-                </div>
-                <div class="product">
-                    <img src="../public/img/sanpham5.jpg" alt="Sản phẩm 5">
-                    <h3 class="product__name">kem trắng ra</h3>
-                    <p class="product__price">280.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=5" class="news-read-more">Xem thêm</a>
-                </div>
-                <div class="product">
-                    <img src="../public/img/sanpham6.jpg" alt="Sản phẩm 6">
-                    <h3 class="product__name">kem trắng ra</h3>
-                    <p class="product__price">280.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=6" class="news-read-more">Xem thêm</a>
-                </div>
-                <div class="product">
-                    <img src="../public/img/sanpham2.png" alt="Sản phẩm 7">
-                    <h3 class="product__name">kem trắng ra</h3>
-                    <p class="product__price">280.000 VNĐ</p>
-                    <a href="chitietsanpham.html?id=7" class="news-read-more">Xem thêm</a>
-                </div>
+            <div class="brand-box">
+                <img src="../public/img/partner-2.png" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="../public/img/partner-3.png" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="../public/img/partner-4.png" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="../public/img/partner-5.png" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="../public/img/partner-6.png" alt="">
             </div>
         </div>
-        <!-- phân trang -->
-<div class="pagination">
-<button id="prevPage">«</button>
-<span id="pageNumbers"></span>
-<button id="nextPage">»</button>
-</div>
-<!-- javacrip -->
-<script>
-// Lấy danh sách sản phẩm
-const products = document.querySelectorAll(".product");
-const itemsPerPage = 6; // Số sản phẩm hiển thị trên mỗi trang
-let currentPage = 1;
-
-// Tính tổng số trang
-const totalPages = Math.ceil(products.length / itemsPerPage);
-
-function showPage(page) {
-    products.forEach((product, index) => {
-        product.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? "block" : "none";
-    });
-}
-
-function updatePagination() {
-    const pageNumbers = document.getElementById("pageNumbers");
-    pageNumbers.innerHTML = ""; // Xóa số trang cũ
-
-    for (let i = 1; i <= totalPages; i++) {
-        const pageBtn = document.createElement("button");
-        pageBtn.textContent = i;
-        pageBtn.className = (i === currentPage) ? "active" : "";
-        pageBtn.onclick = () => {
-            currentPage = i;
-            showPage(currentPage);
-            updatePagination();
-        };
-        pageNumbers.appendChild(pageBtn);
-    }
-
-    document.getElementById("prevPage").disabled = currentPage === 1;
-    document.getElementById("nextPage").disabled = currentPage === totalPages;
-}
-
-// Chuyển trang trước / sau
-document.getElementById("prevPage").addEventListener("click", () => {
-    if (currentPage > 1) {
-        currentPage--;
-        showPage(currentPage);
-        updatePagination();
-    }
-});
-
-document.getElementById("nextPage").addEventListener("click", () => {
-    if (currentPage < totalPages) {
-        currentPage++;
-        showPage(currentPage);
-        updatePagination();
-    }
-});
-
-// Khởi động phân trang
-showPage(currentPage);
-updatePagination();
-</script>
-
-        
     </div>
-    <footer class="footer"></footer>
     
-</div>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="note">
             <div class="footer__content">
                 <div class="footer__column">
                     <h5>LIÊN HỆ</h5>
@@ -203,8 +159,8 @@ updatePagination();
                 <div class="footer__column">
                     <h5>TẢI APP NGAY</h5>
                     <div class="footer__apps">
-                        <img src="../public/img/goodle_play.jpg" alt="Android App"><br>
-                        <img src="../public/img/app_store.jpg" alt="iOS App">
+                        <img src="../public/img/app-android.jpg" alt="Android App"><br>
+                        <img src="../public/img/app-ios.jpg" alt="iOS App">
                     </div>
                 </div>
                 <div class="footer__column">
@@ -223,31 +179,5 @@ updatePagination();
             </div>
         </div>
     </footer>
-
-    <script src="../public/js/index.js"></script>
-    <script>
-        // Danh sách bài viết mẫu (Có thể thay bằng dữ liệu từ backend)
-        const productData = [
-            { id: 1, title: "Cẩm nang ngăn ngừa lão hoá", image: "../public/img/sanpham1.png", content: "Chi tiết về cách ..." },
-            { id: 2, title: "Top 5 sản phẩm dưỡng da hot", image: "../public/img/sanpham2.png", content: "Danh sách 5 sản phẩm chăm sóc da tốt nhất..." },
-            { id: 3, title: "Bí quyết trang điểm tự nhiên", image: "../public/img/sanpham3.png", content: "Hướng dẫn trang điểm tự nhiên phù hợp với mọi loại da..." }
-        ];
-    
-        // Lấy ID bài viết từ URL
-        const params = new URLSearchParams(window.location.search);
-        const newsId = parseInt(params.get("id"));
-    
-        // Tìm bài viết tương ứng
-        const newsItem = productData.find(item => item.id === newsId);
-    
-        if (newsItem) {
-            document.getElementById("product-title").textContent = newsItem.title;
-            document.getElementById("news-image").src = newsItem.image;
-            document.getElementById("news-content").textContent = newsItem.content;
-        } else {
-            document.getElementById("news-detail").innerHTML = "<p>Bài viết không tồn tại.</p>";
-        }
-    </script>
-    
 </body>
 </html>

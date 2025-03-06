@@ -463,17 +463,23 @@
 }
 
 .news-item {
-    display: flex;
-    flex-direction: row; /* Ảnh bên trái, nội dung bên phải */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 15px; /* Khoảng cách giữa ảnh và nội dung */
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
     background: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+}
 .news-item:hover {
     transform: translateY(-5px);
 }
@@ -774,40 +780,3 @@
 
 
 
-/*  Đăng ký đăng nhập */
-
-.auth-form__container {
-    padding: 0 32px;
-}
-
-.auth-form__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.auth-form__heading {
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--text-color);
-}
-.auth-form__switch-btn {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-.auth-form__controls {  
-    font-size: 18px; /* Điều chỉnh kích thước chữ */
-    padding: 20px; /* Điều chỉnh khoảng cách bên trong */
-}
-
-
-.auth-form__socials {
-    display: flex;
-    justify-content: flex-end;
-}
-.news {
-    margin-top: -400px; /* Dịch lên trên, có thể điều chỉnh giá trị */
-    padding-top: 0; /* Loại bỏ khoảng cách nếu có */
-}

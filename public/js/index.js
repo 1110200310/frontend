@@ -1,4 +1,3 @@
-
 const listImage =document.querySelector('.list-images')
 const imgs = document.getElementsByTagName('img')
 const btnLeft = document.querySelector('.btn-left')
@@ -49,12 +48,12 @@ btnLeft.addEventListener('click',() => {
     handleEventChangeSlide = setInterval(handleChangeSlide,4000)
 })
 // Trượt sản phẩm>
-// Định vị hai mũi tên
+
 document.addEventListener("DOMContentLoaded", function () {
     const btns = document.querySelector('.btns'); 
     const container = document.querySelector('.container'); 
 
-    // Đặt container làm phần tử cha để định vị nút bên trong
+   
     container.style.position = "relative"; 
     btns.style.position = "absolute";
     btns.style.top = "50%";  
@@ -107,96 +106,19 @@ document.addEventListener("DOMContentLoaded", function () {
         listImage.style.transform = `translateX(-${productWidth * current}px)`; // Di chuyển danh sách sản phẩm
     };
 
-    // Xử lý sự kiện khi nhấn nút phải
+    
     btnRight.addEventListener('click', () => {
         handleChangeSlide('next');
     });
 
-    // Xử lý sự kiện khi nhấn nút trái
+   
     btnLeft.addEventListener('click', () => {
         handleChangeSlide('prev');
     });
 });
-
-
-
 // trượt sản phẩm<
 
 
-
-
-
-// phân trang tin tức
-// document.addEventListener("DOMContentLoaded", function() {
-//     const itemsPerPage = 6; 
-//     let currentPage = 1;
-
-//     const newsItems = document.querySelectorAll(".news-item"); 
-//     const totalPages = Math.ceil(newsItems.length / itemsPerPage);
-
-//     function showPage(page) {
-//         let start = (page - 1) * itemsPerPage;
-//         let end = start + itemsPerPage;
-
-//         newsItems.forEach((item, index) => {
-//             if (index >= start && index < end) {
-//                 item.style.display = "block";
-//             } else {
-//                 item.style.display = "none";
-//             }
-//         });
-
-//         document.getElementById("pageNumber").textContent = page;
-//     }
-
-//     document.getElementById("prevPage").addEventListener("click", function() {
-//         if (currentPage > 1) {
-//             currentPage--;
-//             showPage(currentPage);
-//         }
-//     });
-
-//     document.getElementById("nextPage").addEventListener("click", function() {
-//         if (currentPage < totalPages) {
-//             currentPage++;
-//             showPage(currentPage);
-//         }
-//     });
-
-//     showPage(currentPage);
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-   
-//     if (document.getElementById("news-detail")) {
-        
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const newsId = urlParams.get("id");
-
-//         if (!newsId) {
-//             document.getElementById("news-detail").innerHTML = "<p>Không tìm thấy bài viết.</p>";
-//             return;
-//         }
-
-        
-//         const newsData = [
-//             { id: "1", title: "Bí quyết dưỡng da", image: "../public/img/tintuc1.png", content: "Nội dung chi tiết bài viết 1..." },
-//             { id: "2", title: "Xu hướng mỹ phẩm", image: "../public/img/tintuc2.png", content: "Nội dung chi tiết bài viết 2..." },
-//             { id: "3", title: "Cách trang điểm tự nhiên", image: "../public/img/tintuc3.png", content: "Nội dung chi tiết bài viết 3..." }
-//         ];
-
-        
-//         const article = newsData.find(item => item.id === newsId);
-
-//         if (article) {
-//             document.getElementById("news-title").textContent = article.title;
-//             document.getElementById("news-image").src = article.image;
-//             document.getElementById("news-content").textContent = article.content;
-//         } else {
-//             document.getElementById("news-detail").innerHTML = "<p>Bài viết không tồn tại.</p>";
-//         }
-//     }
-// }); tin tức<
 // danh sách khi nhấn xem thêm ở sản phẩm 
 document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra xem có phần hiển thị chi tiết sản phẩm không

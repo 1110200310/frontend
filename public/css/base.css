@@ -1,5 +1,4 @@
 :root {
-    --white-color: #ddcece;
     --black-color: #000;
     --text-color: #333;
 
@@ -23,6 +22,98 @@ html {
     flex-wrap: wrap;
 }
 /* Modal */
+/*  Đăng ký đăng nhập */
+.btn--primary {
+    background-color: rgb(200, 118, 46);
+    color: rgb(247, 247, 247); /* Để chữ dễ đọc trên nền vàng */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn--primary:hover {
+    background-color: gold; /* Hiệu ứng khi di chuột vào */
+}
+.header-text span {
+    cursor: pointer;
+}
+
+
+.header-text {
+    display: flex;
+    justify-content: space-between; /* Cách đều ba chữ */
+    align-items: center;
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    max-width: 200px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa trang */
+    font-size: 13px; /* Cỡ chữ */
+    font-weight: bold; /* Chữ đậm */
+    text-transform: uppercase; /* Viết hoa */
+    margin: 20px auto 0;
+    text-align: center; /* Căn giữa chữ */
+    margin-bottom: 20px; /* Dịch xuống dưới một chút */
+}
+.auth-form__group {
+    width: 80%; /* Giới hạn chiều rộng để ô nhập không quá to */
+    display: flex;
+    justify-content: center; /* Căn giữa ô nhập */
+    margin-top: 20px; /* Đẩy xuống dưới */
+}
+
+.auth-form__input {
+    width: 70%;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 20px; /* Bo tròn góc */
+    border: 1px solid #ccc; /* Viền mỏng để đẹp hơn */
+    outline: none; /* Loại bỏ viền xanh khi click vào */
+}
+
+.auth-form__header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.auth-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung */
+    justify-content: center;
+}
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.auth-form__controls {  
+    font-size: 18px; /* Điều chỉnh kích thước chữ */
+    padding: 20px; /* Điều chỉnh khoảng cách bên trong */
+}
+
+
+.auth-form__socials {
+    display: flex;
+    justify-content: flex-end;
+}
+.news {
+    margin-top: -400px; /* Dịch lên trên, có thể điều chỉnh giá trị */
+    padding-top: 0; /* Loại bỏ khoảng cách nếu có */
+}
+
 .modal {
     z-index: 1000; /* Đặt giá trị cao để bao phủ toàn bộ màn hình */
     display: flex;
@@ -44,12 +135,14 @@ html {
 .modal__body {
     width: 400px;
     height: 400px;
-    background-color: var(--white-color);
-    margin: auto; /* Không cần thiết khi dùng flexbox */
-    position: relative; /* Để đảm bảo z-index hoạt động đúng */
-    z-index: 1; /* Nằm trên modal__overlay */
+    background: url('../img/header.jpg') no-repeat center center;
+    background-size: cover; /* Đảm bảo ảnh phủ hết modal */
+    margin: auto;
+    position: relative;
+    z-index: 1;
     border-radius: 5px;
 }
 
+/* model< */
 
     
