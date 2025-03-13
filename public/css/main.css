@@ -3,11 +3,12 @@
     background-size: cover; /* Phủ kín header */
     background-position: center; /* Căn giữa ảnh */
     background-repeat: no-repeat;
-    height: 100px; /* Điều chỉnh chiều cao của header */
+    height: 110px; /* Điều chỉnh chiều cao của header */
     width: 100%;
     margin-bottom: 0; /* Xóa khoảng cách dưới của header */
     border-bottom: 4px solid orange; /* Đường kẻ cam */    
 }
+
 
 
 .header__navbar {

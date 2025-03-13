@@ -1,37 +1,3 @@
-
-body {
-    /* margin: 0; */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.header {
-    width: 100%;
-}
-
-.slide-show {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Điều chỉnh chiều cao theo nhu cầu */
-    overflow: hidden;
-    margin-top: 0px;
-}
-
-.list-images {
-    display: flex;
-    width: 300%; /* Hoặc số lượng ảnh * 100% */
-    height: 100%;
-    transition: transform 0.8s ease-in-out;
-}
-
-.list-images img {
-    width: calc(100% / 3); /* Nếu có 3 ảnh */
-    height: 100%;
-    object-fit: cover;
-}
 /* các dịch vụ */
 .feature-section {
     display: flex;
@@ -68,7 +34,108 @@ body {
     color: #555;
 }
 /* các dịch vụ < */
+/* slide show> */
 
+.content4 {
+    position: relative;
+    width: 100vw;  /* Chiều rộng toàn màn hình */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.gallery-display-area {
+    overflow: hidden;
+    width: 100vw;  /* Đảm bảo container full màn hình */
+    height: 100vh; /* Đảm bảo container full màn hình */
+    position: relative;
+}
+
+.gallery-wrap {
+    display: flex;
+    width: 300%; /* 3 ảnh = 300% */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation: slideShow 16s infinite;
+}
+
+.gallery-wrap img {
+    width: 100vw;  /* Mỗi ảnh có kích thước bằng màn hình */
+    height: 100vh; /* Đảm bảo ảnh full màn hình */
+    object-fit: cover; /* Ảnh không bị méo, lấp đầy khung */
+}
+/* Chỉ áp dụng cho nút điều hướng trong phần gallery */
+.gallery-display-area button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    z-index: 10; /* Đảm bảo nút nằm trên ảnh */
+}
+
+/* Căn chỉnh nút "❮" bên trái */
+#prev {
+    left: 10px;
+}
+
+/* Căn chỉnh nút "❯" bên phải */
+#next {
+    right: 10px;
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@keyframes slideShow {
+    20% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: -100%;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    60% {
+        margin-left: -200%;
+    }
+    /* 70% {
+        margin-left: -300%;
+    }có ảnh 4 thì thêm vào 
+    80% {
+        margin-left: -300%;
+    } */
+}
+
+.content1 {
+    height: 250px;
+    margin: 20px 165px;
+    position: relative;
+}
+
+.content2 {
+    height: 440px;
+    background-color: #fff;
+    margin: 20px 165px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* slide show< */
 
 /* ưu đãi hot */
 .container {
